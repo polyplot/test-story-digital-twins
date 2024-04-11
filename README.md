@@ -6,7 +6,7 @@ This is the README for the polyplot starter story. You can adopt it for your own
 
 Edit LICENSE.txt for license, copyright and attribution notes.
 
-How to start editing:
+How to edit:
 
 1. Install Visual Studio Code https://code.visualstudio.com/.
 2. Install the [VSCode LiveServer extension](https://marketplace.visualstudio.com/items?itemName=ritwickdey.LiveServer) for the preview.
