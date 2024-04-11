@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- Polyplot: copyright 2020-2024 by Polyplot Berlin. -->
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+		<meta name="theme-color" content="#000000">
+		<script type="text/javascript" src="jquery.min.js"></script>
+		<script type="text/javascript" src="reader.js"></script>
+		<script type="text/javascript" src="files/book.js"></script>
+		<link href="reader.css" rel="stylesheet">
+		<link href="files/book.css" rel="stylesheet">
+	</head>
+	<body>
+		<nav role="navigation">
+			<div id="menuToggle">
+				<input type="checkbox" id = "pp_menu" aria-label="Menu"/>
+				<span></span>
+				<span></span>
+				<span></span>
+				<ul id="menu">
+					<li><a href="javascript:library();">Back To Library</a></li>
+					<li><a id="dark" href="javascript:toggleDark();">Dark Mode</a></li>
+					<li><a id="serif" href="javascript:toggleSerif();">Font: Serif</a></li>
+					<li><a href="javascript:startOver();">Start Over</a></li>
+					<li><a href="javascript:resetBook();">Factory Reset</a></li>
+				</ul>
+			</div>
+			<div class="fontsize" id="bigger" onclick="javascript:fontBigger();" aria-label="font bigger">A</div>
+			<div class="fontsize" id="smaller" onclick="javascript:fontSmaller();" aria-label="font smaller">A</div>
+		</nav>
+		<div id="filler"></div>
+		<div id="booktext"><div class="loading"></div></div>
+	</body>
+</html>

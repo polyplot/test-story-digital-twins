@@ -1,0 +1,13 @@
+/* Here you can add any CSS you need to make your book look pretty */
+
+#booktext.light .taktuq {
+    color: #6e6e6e;
+}
+
+#booktext.dark .taktuq {
+    color: #cccccc;
+}
+
+blockquote {
+	font-size: 0.8em;
+}

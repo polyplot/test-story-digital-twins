@@ -1,0 +1,170 @@
+{lock: Du hast an dieser Stelle schon eine Entscheidung getroffen. Diese kannst du nicht mehr ändern. Wenn du ein Ende der Geschichte erreicht hast, kannst du zurückblättern und dich anders entscheiden.}
+
+<img src="files/digitaltwinsbeispiel.jpeg" width="100%">
+
+{chapter start: Prolog}
+
+{anchor interview_start x=-156 y=636}
+
+Herzlich willkommen. 
+
+Wie schön, dass Sie Vorsorge für den Fall Ihres Ablebens treffen möchten. 
+Dass Sie an jene denken, die SIE vermissen werden.
+
+Wir bieten Ihnen ein umfassendes Tracking. 
+Alle Ihre Geräte- Sie brauchen keine neuen!- recorden Ihre Performance. Und ich, ICH HIER, höre Ihnen zu. Ich werde Ihr ganz persönliches {tt SIESELBST}.
+{$counter = 0}
+{jump ableben}
+
+{anchor ableben x=129 y=-44}
+Ich würde nun gerne mit Ihnen darüber sprechen, wie Sie sich Ihr {tt SIESELBST} nach Ihrem Ableben vorstellen. Sind Sie bereit?
+
+{options ableben_options:
+	{option go_ablebengespraech_ja: Ja.:   {jump jamusik}}
+	{option go_ablebengespraech_nein: Nein.:   {jump neinmusik}}
+	{option go_ablebengespraech_dontknow: Weiß nicht.: {jump musikfrage}}
+}
+
+{anchor jamusik x=500 y=73}
+Das ist gut.
+{jump musikfrage}
+
+{anchor neinmusik x=800 y=514}
+{$counter++}
+
+{if $counter == 1: Das kann ich verstehen. Für Lebende ist der Tod ein schwieriges Thema.} 
+
+{if $counter == 2: Das war jetzt das zweite Mal, dass ich dich gefragt habe.} 
+{jump musikfrage}
+
+{if $counter == 3: Ok, vielleicht solltest du erst nochmal drüber schlafen.} 
+{DAS BUCH KANN ERST NACH 24 STUNDEN WEITERGELESEN WERDEN.}
+
+
+{anchor musikfrage x=613 y=245}
+Möchten Sie, dass ich Sie mit entspannenden Geräuschen unterstütze?
+
+{options musik_ja_nein:
+	{option go_musik_ja: Ja gerne.:   {jump soundauswahl}}
+	{option go_musik_nein: Nein.:   {jump weiterentwickeln}}
+
+}
+ja
+Nein
+
+{anchor soundauswahl x=1170 y=343}
+{options soundauswahl:
+	{option go_weltraumsound: Weltraumsounds:   {audio files/weltallgeraeusche.mp3}}
+	{option go_tiergerauesche: Tiergeräusche:   {audio files/tiergeraeusche.mp3}}
+	{option go_meeresrauschen: Meeresrauschen: {audio files/meergeraeusche.mp3}}
+}
+
+{jump weiterentwickeln}
+
+
+{anchor weiterentwickeln x=1395 y=116}
+Möchten Sie, dass {tt SIESELBST} nach Ihrem Tod in Erinnerung bleiben wie Sie zum Zeitpunkt Ihres Todes sind? 
+Oder möchten Sie, dass {tt SIESELBST} sich weiterentwickeln können, so wie eine zukünftige Version von Ihnen wäre?
+
+{options weiterentwickeln:
+	{option go_weiterentwickeln_nein: Ich möchte so bleiben wie ich bin. Oder war.:  {jump weiterentwickeln_nein}}
+	{option go_weiterentwickeln_ja: Ich möchte mich weiterentwickeln.:  {jump weiterentwickeln_ja}}
+}
+
+
+{anchor weiterentwickeln_nein x=1849 y=114}
+Eine ausgezeichnete Wahl.
+{jump payment} 
+
+
+{anchor weiterentwickeln_ja x=1762 y=323}
+Manchmal kann es vorkommen, dass Angehörige und Freund*innen nicht zufrieden sind mit den Veränderungen der {tt SIESELBSTS}. 
+Möchten Sie eine Reset Funktion einbauen? Also soll es möglich sein, alle Änderungen rückgängig zu machen und {tt SIESELBST} wieder in den Auslieferungszustand zurückzuversetzen? 
+
+{options reset:
+	{option go_reset_ja: Ja.: {jump reset_ja}}
+	{option go_reset_nein: Nein.:  {jump payment}}
+}
+
+
+{unlock}
+{anchor reset_ja x=2306 y=239}
+Soll der Reset für alle gelten? Also, wenn eine Person den Knopf drückt und {tt SIESELBST}, das Modell von Ihnen, Ihr zukünftiges SIE, zurücksetzt, soll das dann für alle, die damit interagieren, zurückgesetzt werden?
+
+{options resetbereich:
+	{option go_reset_alle: Ja.: {jump payment}}
+	{option go_reset_nichtalle: Nein.:  {jump moeglichkeiten}}
+}
+
+{anchor moeglichkeiten x=2646 y=777}
+An dieser Stelle muss ich Sie darauf aufmerksam machen, dass ab diesen Zeitpunkt dann mindestens zwei Varianten von Ihnen gleichzeitig existieren.
+
+
+{options varianteninfo:
+	{option go_mitvarianten: Ich nehme das zur Kenntnis.: {jump payment}}
+	{option go_umentscheiden: ich möchte mich noch einmal umentscheiden.:  {jump reset_ja}}
+}
+
+
+{anchor payment x=2082 y=1366}
+Um nach Ihrem Tod ein {tt SIESELBST} von Ihnen zu realisieren, mit denen Ihre Angehörigen und Freunde weiterhin interagieren können, müssen Sie natürlich eine finanzielle Aufwendung machen. An welchen Teil Ihres Vermögens dachten Sie dabei?
+An wieviel dachten Sie denn so?
+
+{options payment:
+	{option pay_all: Alles.:   {jump reichtauchnicht}}
+	{option pay_twothird: Zwei Drittel.:   {jump not_enough}}
+	{option pay_half: Die Hälfte.:   {jump not_enough}}
+	{option pay_onequarter: Weniger als ein Viertel.:   {jump not_enough}}
+	{option pay_nothing: Ich möchte kein Geld dafür ausgeben.:   {jump not_enough}}
+}
+
+{anchor not_enough x=2611 y=1389}
+{audio stop}
+Das wird nicht ausreichen.
+Möchten Sie vielleicht noch einmal darüber nachdenken?
+
+{options payment:
+	{option pay_all: Ok, ich gebe alles.:   {jump reichtauchnicht}}
+	{option pay_twothird: Zwei Drittel.:   {jump not_enough}}
+	{option pay_half: Die Hälfte.:   {jump not_enough}}
+	{option pay_onequarter: Weniger als ein Viertel.:   {jump not_enough}}
+	{option pay_nothing: Ich möchte kein Geld dafür ausgeben.:   {jump earlygoodbye}}
+}
+
+{anchor reichtauchnicht x=3039 y=1227}
+Ich muss Sie leider enttäuschen.
+Ihr Vermögen zu Lebzeiten wird nicht ausreichen, um ein voillwertiges {tt SIESIELBST} herstellen 
+{if $go_weiterentwickeln_ja: und dauerhaft mit den von Ihnen gewünschten Weiterentwicklungen betreiben können.}
+{if $go_weiterentwickeln_nein: und dauerhaft betreiben zu können.}
+
+Allerdings besteht die Möglichkeit, Ihr {tt SIESELBST} eigenständig seinen künftigen Unterhalt verdienen zu lassen...
+{jump chapter_1}
+
+{anchor earlygoodbye x=3079 y=1711}
+Herzlichen Dank für Ihren Besuch.
+Wir freuen uns, dass wir Ihnen behilflich sein konnten.
+Alles Gute für Sie!
+{jump chapter_1}
+
+{chapter chapter_1: Kapitel 1}
+
+Nachdem sie endlich tot war, 
+
+{options tot:
+	{option cigarette: rauchte sie als erstes eine Zigarette.: {jump cigarette}}
+	{option lifestory: beschloss sie, als erstes das previously anzusehen. Die Zusammenfassung ihres Lebens in Bildern.: {jump lifestory }}
+	{option revenge: ersann sie einen martialischen Racheplan.: {jump revenge}}
+}
+
+
+{anchor cigarette x=3490 y=1514}
+Hier ist die Story noch nicht zu Ende, aber diese Vorschau schon.
+
+{anchor lifestory x=3614 y=1677}
+Hier ist die Story noch nicht zu Ende, aber diese Vorschau schon.
+
+
+{anchor revenge x=3569 y=1902}
+Hier ist die Story noch nicht zu Ende, aber diese Vorschau schon.
+
+{end}
