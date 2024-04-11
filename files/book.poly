@@ -4,7 +4,7 @@
 
 {chapter start: Prolog}
 
-{anchor interview_start x=-156 y=636}
+{anchor interview_start x=550 y=637}
 
 Herzlich willkommen. 
 
@@ -16,7 +16,7 @@ Alle Ihre Geräte- Sie brauchen keine neuen!- recorden Ihre Performance. Und ich
 {$counter = 0}
 {jump ableben}
 
-{anchor ableben x=129 y=-44}
+{anchor ableben x=127 y=219}
 Ich würde nun gerne mit Ihnen darüber sprechen, wie Sie sich Ihr {tt SIESELBST} nach Ihrem Ableben vorstellen. Sind Sie bereit?
 
 {options ableben_options:
@@ -25,7 +25,7 @@ Ich würde nun gerne mit Ihnen darüber sprechen, wie Sie sich Ihr {tt SIESELBST
 	{option go_ablebengespraech_dontknow: Weiß nicht.: {jump musikfrage}}
 }
 
-{anchor jamusik x=500 y=73}
+{anchor jamusik x=501 y=73}
 Das ist gut.
 {jump musikfrage}
 
